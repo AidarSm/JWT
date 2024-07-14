@@ -1,12 +1,10 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import { IRootState } from "../../store";
+import React, { FC } from 'react';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { RootState  } from '../../store';
 
-const Header = () => {
-  const isLoggedIn = useSelector(
-    (state: IRootState) => !!state.auth.authData.accessToken
-  );
+const Header: FC = () => {
+  const isLoggedIn = useSelector((state: RootState) => !!state.auth.authData.accessToken);
 
   return (
     <nav>

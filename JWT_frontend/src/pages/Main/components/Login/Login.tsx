@@ -1,12 +1,12 @@
-import React, { FormEvent, useState } from "react";
-import { useAppDispatch } from "../../../../store";
-import { loginUser } from "../../../../store/auth/actionCreators";
+import React, { FormEvent, useState } from 'react';
+import { useAppDispatch } from '../../../../store';
+import { loginUser } from '../../../../store/auth/authThunk';
 
 const Login = () => {
   const dispatch = useAppDispatch();
 
-  const [login, setLogin] = useState("");
-  const [password, setPassword] = useState("");
+  const [login, setLogin] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
